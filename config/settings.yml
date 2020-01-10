@@ -1,22 +1,7 @@
 plugins:
-  pavilion_home_site_title:
+  pkv_home_site_title:
     client: true
-    default: "Hey, We're Pavilion."
-  pavilion_home_site_description:
+    default: "Welcome to Parkour Vienna"
+  pkv_home_site_description:
     client: true
-    default: "We help people build online communities."
-  pavilion_home_cta:
-    client: true
-    default: "Get in touch"
-  pavilion_team_group:
-    type: group
-    default: "members"
-    client: true
-  pavilion_unassigned_tags:
-    type: tag_list
-    default: "dev-needed"
-    client: true
-  max_earnings_target_month:
-    default: 5000
-  max_actual_hours_target_month:
-    default: 240
+    default: "The largest parkour community in Austria"

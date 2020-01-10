@@ -1,57 +1,21 @@
 <section class="landing">
   <div class="first">
-    {{#if topics}}
-      <div class="topics-title">
-        <span class="text">
-          {{i18n 'home.latest_topics'}}
-        </span>
-        {{#if currentUser.staff}}
-          <a href="/assigned">
-            {{i18n 'filters.assigned.title'}}
-          </a>
-        {{else}}
-          {{category-link category}}
-        {{/if}}
-      </div>
-      
-      {{topic-list topics=topics
-                   hideCategory=true
-                   skipHeader=true}}
-    {{else}}
-      <div class="home-image"></div>
-      <div class="site-title">
-        {{siteSettings.pavilion_home_site_title}}
-      </div>
-      <div class="home-title">
-        <span>{{siteSettings.pavilion_home_site_description}}</span>
-        <a href="mailto:{{siteSettings.contact_email}}" class="home-cta" target="_blank">
-          {{siteSettings.pavilion_home_cta}}
-        </a>
-      </div>
-    {{/if}}
-  </div>
-  
-  <div class="landing-block">
-    <div class="home-title">
-      <a name="learn_more" href="/c/welcome/about">Learn More</a>
+    <div class="site-title drop-shadow">
+      {{siteSettings.pkv_home_site_title}}
     </div>
-    {{#if aboutTopics}}
-      <div class="about-topic-list">
-        {{#each aboutTopics as |aboutTopic|}}
-          {{about-topic topic=aboutTopic}}
-        {{/each}}
-      </div>
-    {{/if}}
+    <br />
+    <div class="home-title drop-shadow">
+      <span>{{siteSettings.pkv_home_site_description}}</span>
+    </div>
   </div>
 
   <div class="landing-block">
-    <div class="home-title">
-      <a name="members" href="#members">Featured Members</a>
-    </div>
-    <div class="home-profiles">
-      {{#each teamMembers as |tm|}}
-        {{team-user-card user=tm}}
-      {{/each}}
-    </div>
+    {{#if infoTopics}}
+      <div class="info-topic-list">
+        {{#each infoTopics as |infoTopic|}}
+          {{info-topic topic=infoTopic}}
+        {{/each}}
+      </div>
+    {{/if}}
   </div>
 </section>

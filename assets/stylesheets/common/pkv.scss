@@ -1,4 +1,4 @@
-@import "common/components/user-card"; 
+@import "common/components/user-card";
 
 .link {
   background-image: linear-gradient(180deg,transparent 95%, $tertiary 0);
@@ -22,6 +22,10 @@
   }
 }
 
+.drop-shadow {
+  text-shadow: black 0 0 10px;
+}
+
 .categories-and-latest div.column.categories, .categories-and-top div.column.categories {
   margin-right: 0;
 }
@@ -43,56 +47,45 @@ section.landing {
   margin: 20px 0 80px;
   position: relative;
   font-weight: 100;
+  color: #ebebeb;
 
   .first {
     height: 400px;
     width: 100%;
     display: inline-block;
     margin-bottom: 30px;
-    border: 1px solid $primary;
-    overflow: scroll;
-    
+    border: 1px solid #ebebeb;
+    background: url("/plugins/discourse-pkv/assets/background.jpg") no-repeat center center;
+    background-size: cover;
+
     > .topics-title {
       padding: 15px 10px;
       font-size: 1.7em;
-      
+
       .badge-category-bg, .badge-category-parent-bg, .d-icon {
         display: none;
       }
     }
-    
+
     > .site-title, > .home-title {
-      border: 1px solid $primary;
+      border: 1px solid #ebebeb;
       border-radius: 4px;
     }
-    
+
     .main-link .topic-details .topic-category {
       display: none;
     }
   }
-
-  .home-image {
-    background-image: url("/plugins/discourse-pavilion/assets/background.png");
-    background-size: contain;
-    position: absolute;
-    height: 400px;
-    width: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-
   .site-title {
     font-size: 38px;
     margin: 60px 0 20px 20px;
     padding: 20px;
-    background-color: white;
     display: inline-block;
   }
 
   .home-title {
     font-size: 28px;
     margin: 20px 0;
-    background-color: white;
     display: inline-block;
 
     a {
@@ -146,24 +139,24 @@ section.landing {
       text-align: center;
     }
   }
-  
-  .about-topic-list {
+
+  .info-topic-list {
     display: flex;
     justify-content: space-between;
     flex-flow: wrap;
-    
-    .about-topic {
+
+    .info-topic {
       @extend .home-box;
-      
+
       .title-container {
         display: flex;
         justify-content: space-between;
         margin-bottom: 10px;
-        
+
         .title {
           @extend .small-home-title;
         }
-        
+
         .user {
           margin-left: 5px;
         }
@@ -179,14 +172,14 @@ section.landing {
 
 .team-user-card {
   width: 48%;
-  
+
   &> div {
     @extend #user-card;
     width: 100%;
     box-shadow: none;
     border: 1px solid $primary;
     border-radius: 4px;
-    
+
     .card-content {
       border-radius: 4px;
     }
@@ -195,7 +188,7 @@ section.landing {
 
 .work-data {
   display: flex;
-  
+
   .work-label {
     margin-right: 10px;
   }
@@ -209,28 +202,28 @@ section.landing {
   .work-container {
     margin-top: 10px;
     margin-bottom: 30px;
-    
+
     table {
       margin: 0;
     }
   }
-  
+
   .title {
     display: inline-flex;
     width: 100%;
     margin-bottom: 10px;
     justify-content: space-between;
     align-items: center;
-    
+
     > span {
       margin: 0 0 0 10px;
       font-size: 1.1487em;
     }
-    
+
     .controls {
       display: flex;
     }
-    
+
     .combo-box {
       margin-left: 10px;
     }
