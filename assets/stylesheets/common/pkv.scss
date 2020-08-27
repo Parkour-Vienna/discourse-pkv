@@ -175,7 +175,7 @@ section.landing {
   width: 48%;
 
   &> div {
-    @extend #user-card;
+    @extend #user-card !optional;
     width: 100%;
     box-shadow: none;
     border: 1px solid $primary;
