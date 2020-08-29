@@ -13,6 +13,7 @@ if respond_to?(:register_svg_icon)
   register_svg_icon "dollar-sign"
   register_svg_icon "funnel-dollar"
   register_svg_icon "stopwatch"
+  register_svg_icon "arrow-right"
 end
 
 after_initialize do
