@@ -8,12 +8,9 @@ register_asset "stylesheets/common/pkv.scss"
 register_asset "stylesheets/mobile/pkv.scss", :mobile
 
 if respond_to?(:register_svg_icon)
-  register_svg_icon "hard-hat"
-  register_svg_icon "clock-o"
-  register_svg_icon "dollar-sign"
-  register_svg_icon "funnel-dollar"
-  register_svg_icon "stopwatch"
-  register_svg_icon "arrow-right"
+  register_svg_icon "users"
+  register_svg_icon "chalkboard-teacher"
+  register_svg_icon "landmark"
 end
 
 after_initialize do
@@ -55,19 +52,17 @@ after_initialize do
       json = {}
       guardian = Guardian.new(current_user)
 
-      info_category = Category.find_by(name: 'Info') || Category.find_by(id: 1)
-
-      if info_topic_list = TopicQuery.new(current_user,
+      if news_topic_list = TopicQuery.new(current_user,
           per_page: 3,
-          category: info_category.id,
+          tags: [SiteSetting.pkv_news_tag],
           no_definitions: true
         ).list_latest
 
-        json[:info_topic_list] = HomeTopicListSerializer.new(info_topic_list,
+        json[:news_topic_list] = HomeTopicListSerializer.new(news_topic_list,
           scope: guardian
         ).as_json
       end
-
+      
       render_json_dump(json)
     end
   end

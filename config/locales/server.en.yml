@@ -1,4 +1,6 @@
 en:
   site_settings:
-    pkv_home_site_title: PKV Site Title
-    pkv_home_site_description: PKV Site Description
+    pkv_news_tag: Tag for posts used in the news section on the homepage
+    pkv_community_link: Target for the community link
+    pkv_parkour_info_link: Target for the Parkour-Info link
+    pkv_learn_parkour_link: Target for the learn parkour link

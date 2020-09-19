@@ -1,7 +1,13 @@
 plugins:
-  pkv_home_site_title:
+  pkv_news_tag:
     client: true
-    default: "Welcome to Parkour Vienna"
-  pkv_home_site_description:
+    default: "news"
+  pkv_community_link:
     client: true
-    default: "The largest parkour community in Austria"
+    default: "/"
+  pkv_parkour_info_link:
+    client: true
+    default: "/"
+  pkv_learn_parkour_link:
+    client: true
+    default: "/"

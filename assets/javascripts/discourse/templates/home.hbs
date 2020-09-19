@@ -1,25 +1,68 @@
-<section class="landing">
-  <div class="first">
-    <div class="site-title drop-shadow">
-      {{siteSettings.pkv_home_site_title}}
+{{discourse-banner user=currentUser banner=site.banner}}
+<section class="top-banner-section is-hero">
+    <div class="banner-image-div">
+        <img class="banner-image" src="/plugins/discourse-pkv/assets/waving.jpg" alt="Banner Image" />
     </div>
-    <br />
-    <div class="home-title drop-shadow">
-      <span>{{siteSettings.pkv_home_site_description}}</span>
+    <div class="banner-overlay-div"></div>
+    <div class="banner-text-div">
+        <span class="banner-text">
+            <h1 class="banner-h1-text main-title">Willkommen bei Parkour Vienna </h1>
+            <p class="banner-body-text">Österreichs größte Parkour-Community</p>
+            <p class="banner-btn"><a class="banner-btn-item" href="/categories">Zum Forum &#8594;</a></p>
+        </span>
     </div>
-    <a href="/categories" class="home-title cta">
-          <span><i>Zum Forum</i>{{d-icon 'arrow-right'}}</span>
-    </a>
-  </div>
+</section>
 
-  <div class="landing-block">
-    {{#if infoTopics}}
-    <h2>Infos</h2>
-      <div class="info-topic-list">
-        {{#each infoTopics as |infoTopic|}}
-          {{info-topic topic=infoTopic}}
-        {{/each}}
-      </div>
+<section class="pillars">
+    <a class="pillar" href="{{siteSettings.pkv_community_link}}">
+        <div class="pillar-top">
+            <div class="pillar-icon">
+                {{d-icon 'users'}}
+            </div>
+            <h3>
+                Community
+            </h3>
+        </div>
+        <p>
+            Für angehende Traceure, unser Forum, Forum-Meeting, Meeting-Calendar, Spot- & Member-Map, etc.
+        </p>
+    </a>
+    <a class="pillar" href="{{siteSettings.pkv_parkour_info_link}}">
+        <div class="pillar-top">
+            <div class="pillar-icon">
+                {{d-icon 'landmark'}}
+            </div>
+            <h3>
+                Parkour-Info
+            </h3>
+        </div>
+        <p>
+            Für Parkour-Interessenten, mit Artikeln rund um die Geschichte von Parkour, F.A.Q, etc.
+        </p>
+    </a>
+    <a class="pillar" href="{{siteSettings.pkv_learn_parkour_link}}">
+        <div class="pillar-top">
+            <div class="pillar-icon">
+                {{d-icon 'chalkboard-teacher'}}
+            </div>
+            <h3>
+                Parkour lernen
+            </h3>
+        </div>
+        <p>
+            Für Personen die nach Parkour-Trainings suchen, Informationen zum Forum-Meeting, einer Liste von Workshops/Kursen, Beginner-Guide, etc.
+        </p>
+    </a>
+</section>
+
+<section class="news">
+    {{#if newsTopics}}
+        <h2 class="section-title">News</h2>
+        <div class="news-list">
+            {{#each newsTopics as |newsTopic|}}
+                {{news-topic topic=newsTopic}}
+            {{/each}}
+
+        </div>
     {{/if}}
-  </div>
 </section>
