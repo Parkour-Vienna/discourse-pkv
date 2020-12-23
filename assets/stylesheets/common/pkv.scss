@@ -208,3 +208,18 @@
     padding: 1em;
   } // overlay objects like text, buttons, etc.
 }
+
+.more {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  img {
+  max-width: 100%;
+    flex: 1;
+    float: left;
+  }
+  p {
+    flex: 1;
+    font-size: 2rem;
+  }
+}
