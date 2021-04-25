@@ -5,7 +5,11 @@
 <a class="content" href="{{{topic.url}}}">
   <div class="title-container">
       <h4>
+        {{#if topic.unicode_title}}
           {{{topic.unicode_title}}}
+        {{else}}
+          {{{topic.title}}}
+        {{/if}}
       </h4>
   </div>
 </a>
