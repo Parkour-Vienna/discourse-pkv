@@ -4,3 +4,6 @@ en:
     pkv_community_link: Target for the community link
     pkv_parkour_info_link: Target for the Parkour-Info link
     pkv_learn_parkour_link: Target for the learn parkour link
+    pkv_fm_link: Target for the forum meeting description
+    pkv_tuesdayness_link: Target for the tuesdayness description
+    pkv_madness_link: Target for the madness description

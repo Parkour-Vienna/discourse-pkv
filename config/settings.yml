@@ -11,3 +11,12 @@ plugins:
   pkv_learn_parkour_link:
     client: true
     default: "/"
+  pkv_fm_link:
+    client: true
+    default: "/"
+  pkv_tuesdayness_link:
+    client: true
+    default: "/"
+  pkv_madness_link:
+    client: true
+    default: "/"
