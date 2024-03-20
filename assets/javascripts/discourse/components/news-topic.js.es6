@@ -1,7 +1,7 @@
 import DiscourseURL from 'discourse/lib/url';
 import { default as computed } from 'ember-addons/ember-computed-decorators';
-
-export default Ember.Component.extend({
+import Component from "@ember/component";
+export default Component.extend({
   classNames: 'news-topic',
 
   @computed('topic.posters')
