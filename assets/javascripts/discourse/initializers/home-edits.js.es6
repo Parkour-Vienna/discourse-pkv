@@ -10,7 +10,6 @@ export default {
     if (!currentUser || !currentUser.homepage_id) setDefaultHomepage('home');
 
     withPluginApi('0.8.23', api => {
-      api.changeWidgetSetting('home-logo', 'href', '/categories')
       api.modifyClass('controller:preferences/interface', {
         @computed()
         userSelectableHome() {
