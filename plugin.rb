@@ -9,7 +9,7 @@ register_asset "stylesheets/mobile/pkv.scss", :mobile
 
 if respond_to?(:register_svg_icon)
   register_svg_icon "users"
-  register_svg_icon "chalkboard-teacher"
+  register_svg_icon "chalkboard-user"
   register_svg_icon "landmark"
 end
 
