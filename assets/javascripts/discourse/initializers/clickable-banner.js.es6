@@ -5,7 +5,6 @@ export default {
   name: "clickable-banner",
   initialize() {
     withPluginApi("0.1", (api) => {
-      console.log('modifying banner to be clickable');
       api.modifyClass(
         "component:discourse-banner",
         (DiscourseBanner) =>
