@@ -10,15 +10,15 @@ export default {
     if (!currentUser || !currentUser.homepage_id) setDefaultHomepage('home');
 
     withPluginApi('0.8.23', api => {
-      api.modifyClass('controller:preferences/interface', {
+      api.modifyClass('controller:preferences/interface', (Superclass) => class extends Superclass {
         @computed()
         userSelectableHome() {
-          let core = this._super();
+          let core = super.userSelectableHome;
           core.push(...[
             { name: "Home", value: 101 },
           ]);
           return core;
-        },
+        }
 
         homeChanged() {
           const homepageId = this.get("model.user_option.homepage_id");
@@ -27,7 +27,7 @@ export default {
           } else if (homepageId === 102) {
             setDefaultHomepage("assigned");
           } else {
-            this._super();
+            super.homeChanged();
           }
         }
       });
