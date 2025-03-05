@@ -1,6 +1,6 @@
 import { setDefaultHomepage } from "discourse/lib/utilities";
 import { withPluginApi } from 'discourse/lib/plugin-api';
-import { observes, default as computed } from 'ember-addons/ember-computed-decorators';
+import { default as computed } from 'discourse/lib/decorators';
 
 export default {
   name: 'home-edits',
