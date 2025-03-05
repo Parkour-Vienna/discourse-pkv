@@ -4,7 +4,7 @@ import { htmlSafe } from "@ember/template";
 export default {
   name: "clickable-banner",
   initialize() {
-    withPluginApi("0.1", (api) => {
+    withPluginApi("2.0.0", (api) => {
       api.modifyClass(
         "component:discourse-banner",
         (DiscourseBanner) =>
