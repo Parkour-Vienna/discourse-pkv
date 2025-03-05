@@ -1,7 +1,7 @@
 # name: discourse-pkv
 # about: PKV customisations
-# version: 0.1
-# authors: Angus McLeod
+# version: 0.2
+# authors: PKV Team
 # url: https://github.com/parkour-vienna/discourse-pkv
 
 register_asset "stylesheets/common/pkv.scss"
